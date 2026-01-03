@@ -7,25 +7,25 @@ const Links = [
         name: 'Home',
         href: '/dashboard',
         icon: FaHome,
-        color: '364153 ',
+        color: '#4a5565 ',
     },
     {
         name: 'New Order',
         href: '/dashboard/NewOrder',
         icon: FaPlus,
-        color: '#4f39f6 ',
+        color: 'blue ',
     },
     {
         name: 'Customers',
         href: '/dashboard/customers',
         icon: FaUser,
-        color: 'black ',
+        color: '#4a5565  ',
     },
     {
         name: 'Events',
         href: '/dashboard/events',
         icon: FaCalendarAlt,
-        color: 'black ',
+        color: '#4a5565   ',
     },
 ]
 type Props = {
@@ -39,25 +39,25 @@ export default function NavLinks({ show }: Props) {
                     const LinkIcon = link.icon
 
                     return (
-                        <div className=" ">
+                        <div>
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 className={
                                     link.href === '/dashboard/NewOrder'
                                         ? 'flex gap-2 items-center p-1.5 mt-3 hover:bg-indigo-100 rounded-[5px]'
-                                        : 'flex gap-2 items-center p-1.5 mt-3 hover:bg-zinc-100 rounded-[5px]'
+                                        : 'flex gap-2 items-center p-1.5 mt-3 hover:bg-zinc-200 rounded-[5px]'
                                 }
                             >
                                 <LinkIcon
-                                    className="w-4 h-3"
+                                    className="w-4 h-4"
                                     color={link.color}
                                 />
                                 <p
                                     className={`${
                                         link.href === '/dashboard/NewOrder'
-                                            ? 'hidden md:block text-indigo-600 text-[13px] '
-                                            : 'text-gray-700 text-[13px]  tracking-wide '
+                                            ? 'hidden md:block text-blue-600 text-[13px] '
+                                            : 'text-zinc-600 text-[14px] tracking-wide ml-0.5 '
                                     }`}
                                 >
                                     {link.name}

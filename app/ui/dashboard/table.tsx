@@ -1,102 +1,162 @@
-import { FaCalendar } from 'react-icons/fa'
+import { FaCalendar, FaCalendarCheck } from 'react-icons/fa'
 import { FaRegClock } from 'react-icons/fa'
+import { FaCheckCircle, FaCogs } from 'react-icons/fa'
+
+import TableSection from './tableSection'
+import { motion } from 'motion/react'
 
 export default function Table() {
     return (
         <div className="overflow-x-auto">
             <table className="min-w-full border border-gray-100 divide-y divide-gray-200 rounded-xl">
-                <thead>
-                    <tr>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                <thead className="">
+                    <tr className="">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Name
                         </th>
 
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Email
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Phone Number
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Event
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Type of Cake
                         </th>
 
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Number of Servings
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Decoration
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Total Price
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             Deposit Paid
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             target date
                         </th>
-                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500">
+                        <th className="px-4 py-1 text-left text-[13px] font-normal text-gray-500 leading-8 ">
                             status
                         </th>
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 bg-white">
-                    <tr>
+                    {/* pending */}
+                    <motion.tr
+                        initial={{ opacity: 0, filter: 'blur(10px)' }}
+                        animate={{ opacity: 1, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    >
+                        <td className="bg-yellow-50/5 px-1 " colSpan={11}>
+                            <div className="flex gap-1.5 items-center">
+                                <span>
+                                    <FaRegClock color="yellow " size={14} />
+                                </span>{' '}
+                                <p className="tracking-wide">Pending</p>
+                            </div>
+                        </td>
+                    </motion.tr>
+                    <TableSection
+                        status="pending"
+                        color="yellow"
+                        delay={0}
+                        duration={0.3}
+                    />
+                    <TableSection
+                        status="pending"
+                        color="yellow"
+                        delay={0.1}
+                        duration={0.3}
+                    />
+                    {/* confiremed */}
+                    <motion.tr
+                        initial={{ opacity: 0, filter: 'blur(10px)' }}
+                        animate={{ opacity: 1, filter: 'blur(0px)' }}
+                        transition={{
+                            duration: 0.3,
+                            ease: 'easeInOut',
+                            delay: 0.2,
+                        }}
+                    >
                         <td className="bg-blue-50 px-1 " colSpan={11}>
                             <div className="flex gap-1.5 items-center">
                                 <span>
-                                    <FaRegClock color="#155dfc " size={14} />
+                                    <FaCalendarCheck color="blue " size={14} />
                                 </span>{' '}
-                                <p>Pending</p>
+                                <p className="tracking-wide">Confirmed</p>
                             </div>
                         </td>
-                    </tr>
-                    <tr className="hover:bg-gray-50">
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            Alice
+                    </motion.tr>
+                    <TableSection
+                        status="pending"
+                        color="blue"
+                        delay={0.3}
+                        duration={0.3}
+                    />
+                    <TableSection
+                        status="pending"
+                        color="blue"
+                        delay={0.4}
+                        duration={0.3}
+                    />
+                    {/* In Production */}
+                    <motion.tr
+                        initial={{ opacity: 0, filter: 'blur(10px)' }}
+                        animate={{ opacity: 1, filter: 'blur(0px)' }}
+                        transition={{
+                            duration: 0.3,
+                            ease: 'easeInOut',
+                            delay: 0.5,
+                        }}
+                    >
+                        <td className="bg-red-50 px-1  " colSpan={11}>
+                            <div className="flex gap-1.5 items-center ">
+                                <span>
+                                    <FaCogs color="red " size={14} />
+                                </span>{' '}
+                                <p className="tracking-wide">In Production</p>
+                            </div>
                         </td>
-
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            <a href="mailto:alice@example.com">
-                                alice@example.com
-                            </a>
+                    </motion.tr>
+                    {/* delivred */}
+                    <TableSection
+                        status="In Production"
+                        color="red"
+                        delay={0.6}
+                        duration={0.3}
+                    />
+                    <motion.tr
+                        initial={{ opacity: 0, filter: 'blur(10px)' }}
+                        animate={{ opacity: 1, filter: 'blur(0px)' }}
+                        transition={{
+                            duration: 0.5,
+                            ease: 'easeInOut',
+                            delay: 0.8,
+                        }}
+                    >
+                        <td className="bg-green-50 px-1  " colSpan={11}>
+                            <div className="flex gap-1.5 items-center ">
+                                <span>
+                                    <FaCheckCircle color="green " size={14} />
+                                </span>{' '}
+                                <p className="tracking-wide">delivred</p>
+                            </div>
                         </td>
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            +33 6 12 34 56 78
-                        </td>
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            Birthday
-                        </td>
-                        <td className="px-4 py-3 text-[14px] font-medium text-gray-700">
-                            Layer Cake
-                        </td>
-
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700 text-center">
-                            12
-                        </td>
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            Flowers
-                        </td>
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            120€
-                        </td>
-                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
-                            Yes
-                        </td>
-                        <td className="px-4 py-3 text-sm text-gray-700 flex items-center gap-1">
-                            <FaCalendar size={13} />
-                            <span> 12/01/2026</span>
-                        </td>
-                        <td className="px-4 py-3 text-sm text-gray-700">
-                            <span className="text-blue-600 bg-blue-100 px-4 py-1 rounded-xl">
-                                pending
-                            </span>
-                        </td>
-                    </tr>
+                    </motion.tr>
+                    <TableSection
+                        status="delivred"
+                        color="green"
+                        delay={1}
+                        duration={1}
+                    />
                 </tbody>
             </table>
         </div>

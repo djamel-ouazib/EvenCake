@@ -27,7 +27,7 @@ export default function Sidenav({ show, setShow }: Props) {
                 {show && (
                     <div className="flex gap-2 items-center flex-3 hover:bg-zinc-100 cursor-pointer py-1 px-3 rounded-[7px]">
                         <span className="w-5 h-[20px] rounded-[20px] bg-green-300"></span>
-                        <p className="text-black font-bold">djamel ouazib</p>
+                        <p className="text-zinc-600 font-bold">djamel ouazib</p>
                     </div>
                 )}
                 <FaBars

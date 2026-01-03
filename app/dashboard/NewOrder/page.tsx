@@ -10,7 +10,7 @@ export default function NewOrder() {
                 take few minute to add a new order for your customrs
             </p>
             <form action="" method="post">
-                <div className="p-6  rounded-xl max-w-3xl m-auto ">
+                <div className="p-6  rounded-xl max-w-3xl m-auto  ">
                     {/* first name & last name */}
                     <div className="flex gap-3 mb-3">
                         <div className="flex-1">
@@ -200,6 +200,15 @@ export default function NewOrder() {
                                 type="number"
                             />
                         </div>
+                    </div>
+                    <div className="mt-3">
+                        {' '}
+                        <button
+                            type="submit"
+                            className="bg-blue-700 w-full text-white py-3 px-1 rounded-[7px]"
+                        >
+                            Add
+                        </button>
                     </div>
                 </div>
             </form>
