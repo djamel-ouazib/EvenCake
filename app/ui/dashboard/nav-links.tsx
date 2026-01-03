@@ -1,8 +1,14 @@
 import Link from 'next/link'
 
-import { FaPlus, FaUser, FaCalendarAlt } from 'react-icons/fa'
+import { FaHome, FaPlus, FaUser, FaCalendarAlt } from 'react-icons/fa'
 
 const Links = [
+    {
+        name: 'Home',
+        href: '/dashboard',
+        icon: FaHome,
+        color: '364153 ',
+    },
     {
         name: 'New Order',
         href: '/dashboard/NewOrder',
@@ -13,13 +19,13 @@ const Links = [
         name: 'Customers',
         href: '/dashboard/customers',
         icon: FaUser,
-        color: '364153 ',
+        color: 'black ',
     },
     {
         name: 'Events',
         href: '/dashboard/events',
         icon: FaCalendarAlt,
-        color: '364153 ',
+        color: 'black ',
     },
 ]
 type Props = {
@@ -50,8 +56,8 @@ export default function NavLinks({ show }: Props) {
                                 <p
                                     className={`${
                                         link.href === '/dashboard/NewOrder'
-                                            ? 'hidden md:block text-indigo-600 text-[13px] font-semibold'
-                                            : 'text-gray-700 text-[13px] font-semibold'
+                                            ? 'hidden md:block text-indigo-600 text-[13px] '
+                                            : 'text-gray-700 text-[13px]  tracking-wide '
                                     }`}
                                 >
                                     {link.name}

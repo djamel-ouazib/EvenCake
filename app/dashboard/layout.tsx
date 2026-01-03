@@ -6,7 +6,7 @@ import { useState } from 'react'
 export default function Layout({ children }: { children: React.ReactNode }) {
     const [show, setShow] = useState<boolean>(true)
     return (
-        <div className="flex bg-zinc-50 p-2">
+        <div className="flex  p-2">
             <motion.div
                 animate={{ width: show ? '16rem' : '3rem' }}
                 transition={{ duration: 0.2, ease: 'easeInOut' }}
