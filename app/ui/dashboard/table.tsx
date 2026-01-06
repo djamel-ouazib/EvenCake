@@ -4,10 +4,15 @@ import { FaCheckCircle, FaCogs } from 'react-icons/fa'
 
 import TableSection from './tableSection'
 import { motion } from 'motion/react'
-
+const StatusColor = [
+    'text-yellow-700 bg-yellow-100 px-4 py-1 rounded-xl cursor-pointer',
+    'text-blue-700 bg-blue-100 px-4 py-1 rounded-xl cursor-pointer',
+    'text-orange-700 bg-orange-100 px-4 py-1 rounded-xl cursor-pointer',
+    'text-green-700 bg-green-100 px-4 py-1 rounded-xl cursor-pointer',
+]
 export default function Table() {
     return (
-        <div className="overflow-x-auto">
+        <div className="">
             <table className="min-w-full border border-gray-100 divide-y divide-gray-200 rounded-xl">
                 <thead className="">
                     <tr className="">
@@ -66,13 +71,13 @@ export default function Table() {
                     </motion.tr>
                     <TableSection
                         status="pending"
-                        color="yellow"
+                        color={StatusColor[0]}
                         delay={0}
                         duration={0.3}
                     />
                     <TableSection
                         status="pending"
-                        color="yellow"
+                        color={StatusColor[0]}
                         delay={0.1}
                         duration={0.3}
                     />
@@ -97,13 +102,13 @@ export default function Table() {
                     </motion.tr>
                     <TableSection
                         status="pending"
-                        color="blue"
+                        color={StatusColor[1]}
                         delay={0.3}
                         duration={0.3}
                     />
                     <TableSection
                         status="pending"
-                        color="blue"
+                        color={StatusColor[1]}
                         delay={0.4}
                         duration={0.3}
                     />
@@ -129,7 +134,7 @@ export default function Table() {
                     {/* delivred */}
                     <TableSection
                         status="In Production"
-                        color="red"
+                        color={StatusColor[2]}
                         delay={0.6}
                         duration={0.3}
                     />
@@ -153,7 +158,7 @@ export default function Table() {
                     </motion.tr>
                     <TableSection
                         status="delivred"
-                        color="green"
+                        color={StatusColor[3]}
                         delay={1}
                         duration={1}
                     />

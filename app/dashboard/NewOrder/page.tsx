@@ -22,9 +22,10 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="customer"
+                                id="firstName"
                                 placeHolder="First name"
                                 type="text"
+                                name="firstName"
                             />
                         </div>
                         <div className="flex-1">
@@ -36,9 +37,10 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="lastName"
+                                id="lastName"
                                 placeHolder="Last name"
                                 type="text"
+                                name="lastName"
                             />
                         </div>
                     </div>
@@ -50,20 +52,26 @@ export default function NewOrder() {
                         >
                             Email <span className="text-red-600">*</span>
                         </label>
-                        <Input label="Email" placeHolder="Email" type="email" />
+                        <Input
+                            id="Email"
+                            placeHolder="Email"
+                            type="email"
+                            name="email"
+                        />
                     </div>
                     {/* phone */}
                     <div className="mb-3">
                         <label
-                            htmlFor="Phone number"
+                            htmlFor="PhoneNumber"
                             className="text-black font-semibold"
                         >
                             Phone number <span className="text-red-600">*</span>
                         </label>
                         <Input
-                            label="Phone number"
+                            id="PhoneNumber"
                             placeHolder="Phone number"
                             type="tel"
+                            name="phoneNumber"
                         />
                     </div>
                     {/* EVENT */}
@@ -77,9 +85,10 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="event"
+                                id="typeEvent"
                                 placeHolder="(birthday, wedding, etc.)"
                                 type="text"
+                                name="typeOfEvent"
                             />
                         </div>
                         <div className="flex-1">
@@ -91,9 +100,10 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="eventDate"
+                                id="EventDate"
                                 placeHolder=""
                                 type="date"
+                                name="evntDate"
                             />
                         </div>
                         <div className="flex-1">
@@ -105,9 +115,10 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="typeCake"
+                                id="TypeOfCake"
                                 placeHolder="Layer Cake"
                                 type="text"
+                                name="typeOfCake"
                             />
                         </div>
                     </div>
@@ -121,23 +132,25 @@ export default function NewOrder() {
                                 Flavors <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="flavors"
+                                id="flavors"
                                 placeHolder="chocolate"
                                 type="text"
+                                name="flavors"
                             />
                         </div>
                         <div className="flex-1">
                             <label
-                                htmlFor="EventDate"
+                                htmlFor="numberOfServing"
                                 className="text-black font-semibold "
                             >
                                 Number of serving{' '}
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="serving"
+                                id="numberOfServing"
                                 placeHolder="0"
                                 type="number"
+                                name="numberOfServing"
                             />
                         </div>
                         <div className="flex-1">
@@ -149,9 +162,10 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="decoration"
+                                id="decoration"
                                 placeHolder="decoration"
                                 type="text"
+                                name="decoration"
                             />
                         </div>
                     </div>
@@ -174,30 +188,32 @@ export default function NewOrder() {
                     <div className='flex gap-3 mb-3"'>
                         <div className="flex-1">
                             <label
-                                htmlFor="Total price"
+                                htmlFor="totalPrice"
                                 className="text-black font-semibold "
                             >
                                 Total price{' '}
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="Total price"
+                                id="totalPrice"
                                 placeHolder="Total price"
                                 type="number"
+                                name="totalPrice"
                             />
                         </div>
                         <div className="flex-1">
                             <label
-                                htmlFor="Deposit paid"
+                                htmlFor="depositPaid"
                                 className="text-black font-semibold "
                             >
                                 Deposit paid{' '}
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                label="serving"
+                                id="serving"
                                 placeHolder="0"
                                 type="number"
+                                name="depositPaid"
                             />
                         </div>
                     </div>
