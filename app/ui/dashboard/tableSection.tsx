@@ -20,9 +20,10 @@ export default function TableSection({
     return (
         <>
             <motion.tr
-                className="hover:bg-gray-50 relative z-0"
+                className="hover:bg-gray-50  "
                 initial={{ opacity: 0, filter: 'blur(10px)' }}
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
+                onClick={() => setShowModal(!showModal)}
                 transition={{
                     duration: duration,
                     ease: 'easeInOut',
@@ -63,14 +64,26 @@ export default function TableSection({
                     <span> 12/01/2026</span>
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-700 ">
-                    <button className={`${color} z-0`} onClick={()=>setShowModal(!showModal)}>{status}</button>
-                    {showModal  ? (
-                        <div className="w-[120px] h-[110px] bg-gray-50 p-2 absolute rounded-2xl mt-2 flex flex-col z-auto">
-                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-yellow-600 font-semibold">pending</p>
-                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-blue-600 font-semibold">confirmed</p>
-                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-orange-600 font-semibold">In Production </p>
-                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-green-600 font-semibold">delivred</p>
-
+                    <button
+                        className={`${color} z-0`}
+                        onClick={() => setShowModal(!showModal)}
+                    >
+                        {status}
+                    </button>
+                    {showModal ? (
+                        <div className="w-30 h-[110px] bg-gray-200 p-2 absolute rounded-2xl mt-2 flex flex-col ">
+                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-yellow-600 font-semibold">
+                                pending
+                            </p>
+                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-blue-600 font-semibold">
+                                confirmed
+                            </p>
+                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-orange-600 font-semibold">
+                                In Production{' '}
+                            </p>
+                            <p className="text-center flex-1 cursor-pointer hover:bg-gray-200 rounded-[5px] text-green-600 font-semibold">
+                                delivred
+                            </p>
                         </div>
                     ) : null}
                 </td>

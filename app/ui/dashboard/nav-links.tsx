@@ -45,8 +45,8 @@ export default function NavLinks({ show }: Props) {
                                 href={link.href}
                                 className={
                                     link.href === '/dashboard/NewOrder'
-                                        ? 'flex gap-2 items-center p-1.5 mt-3 hover:bg-indigo-100 rounded-[5px]'
-                                        : 'flex gap-2 items-center p-1.5 mt-3 hover:bg-zinc-200 rounded-[5px]'
+                                        ? 'flex gap-2 items-center p-1.5 mt-3 hover:bg-indigo-100 rounded-[5px] font-semibold'
+                                        : 'flex gap-2 items-center p-1.5 mt-3 hover:bg-zinc-200 rounded-[5px] font-semibold'
                                 }
                             >
                                 <LinkIcon

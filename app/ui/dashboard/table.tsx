@@ -53,7 +53,7 @@ export default function Table() {
                         </th>
                     </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-100 bg-white">
+                <tbody className="divide-y divide-gray-100 bg-white relative">
                     {/* pending */}
                     <motion.tr
                         initial={{ opacity: 0, filter: 'blur(10px)' }}
