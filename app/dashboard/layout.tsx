@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <motion.div
                 animate={{ width: show ? '16rem' : '3rem' }}
                 transition={{ duration: 0.2, ease: 'easeInOut' }}
-                className="w-65 h-screen bg-zinc-50 "
+                className="w-65 h-screen  "
             >
                 <Sidenav show={show} setShow={setShow} />
             </motion.div>
