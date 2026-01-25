@@ -75,7 +75,7 @@ export default function NewOrder() {
                         />
                     </div>
                     {/* EVENT */}
-                    <div className='flex gap-3 mb-3"'>
+                    <div className="flex gap-3 mb-3">
                         <div className="flex-1">
                             <label
                                 htmlFor="typeEvent"
@@ -172,13 +172,14 @@ export default function NewOrder() {
                     {/* personalized message */}
                     <div className="mb-3">
                         <label
-                            htmlFor="Personalized message"
+                            htmlFor="personalizedMessage"
                             className="text-black font-semibold"
                         >
                             Personalized message
                             <span className="text-red-600">*</span>
                         </label>
                         <textarea
+                            id="personalizedMessage"
                             name="personalizedMessage"
                             className="block border border-zinc-400 w-full"
                             placeholder="Enter the message to write on the cake"
@@ -210,7 +211,7 @@ export default function NewOrder() {
                                 <span className="text-red-600">*</span>
                             </label>
                             <Input
-                                id="serving"
+                                id="depositPaid"
                                 placeHolder="0"
                                 type="number"
                                 name="depositPaid"
@@ -221,7 +222,7 @@ export default function NewOrder() {
                         {' '}
                         <button
                             type="submit"
-                            className="bg-blue-700 w-full text-white py-3 px-1 rounded-[7px]"
+                            className="bg-black w-full cursor-pointer text-white py-3 px-1 rounded-[7px]"
                         >
                             Add
                         </button>

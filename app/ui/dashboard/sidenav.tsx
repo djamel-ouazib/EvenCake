@@ -1,6 +1,7 @@
 import { FaBars } from 'react-icons/fa'
 import NavLinks from './nav-links'
 import { useEffect } from 'react'
+import { PanelLeft } from 'lucide-react'
 
 type Props = {
     show: boolean
@@ -30,9 +31,9 @@ export default function Sidenav({ show, setShow }: Props) {
                         <p className="text-zinc-600 font-bold">djamel ouazib</p>
                     </div>
                 )}
-                <FaBars
-                    color="364153 "
-                    size={14}
+                <PanelLeft
+                    color="#364153 "
+                    size={16}
                     className="cursor-pointer flex-1"
                     onClick={() => setShow(!show)}
                 />

@@ -13,7 +13,7 @@ const Links = [
         name: 'New Order',
         href: '/dashboard/NewOrder',
         icon: FaPlus,
-        color: 'blue ',
+        color: 'white ',
     },
     {
         name: 'Customers',
@@ -45,19 +45,19 @@ export default function NavLinks({ show }: Props) {
                                 href={link.href}
                                 className={
                                     link.href === '/dashboard/NewOrder'
-                                        ? 'flex gap-2 items-center p-1.5 mt-3 hover:bg-indigo-100 rounded-[5px] font-semibold'
-                                        : 'flex gap-2 items-center p-1.5 mt-3 hover:bg-zinc-200 rounded-[5px] font-semibold'
+                                        ? 'flex gap-2 items-center px-1 py-1.5 mt-3 bg-black  rounded-[5px] font-semibold'
+                                        : 'flex gap-2 items-center px-1 py-1.5 mt-3 hover:bg-zinc-200 rounded-[5px] font-semibold'
                                 }
                             >
                                 <LinkIcon
-                                    className="w-4 h-4"
+                                    className="w-3 h-4"
                                     color={link.color}
                                 />
                                 <p
                                     className={`${
                                         link.href === '/dashboard/NewOrder'
-                                            ? 'hidden md:block text-blue-600 text-[13px] '
-                                            : 'text-zinc-600 text-[14px] tracking-wide ml-0.5 '
+                                            ? 'hidden md:block text-white text-[13px] '
+                                            : 'text-zinc-600 text-[13px] tracking-wide ml-0.5 '
                                     }`}
                                 >
                                     {link.name}

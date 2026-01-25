@@ -12,7 +12,7 @@ export default function Dashboard() {
                 <div className="flex-1 w-full">
                     <StatWrapperCard />
                 </div>
-                <div className="flex flex-3  ">
+                <div className="w-full md:felx-col flex gap-5 ">
                     <MonthlyRevenueChart />
                     <CustomersCards />
                 </div>

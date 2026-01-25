@@ -11,9 +11,7 @@ export default function Navbar() {
     return (
         <nav className="flex items-center py-4">
             <div className="flex-2">
-                <span className="text-3xl text-blue-700 font-bold">
-                    CakeEvent
-                </span>
+                <span className="text-3xl text-black font-bold">CakeEvent</span>
             </div>
 
             <div className="flex-1">
@@ -35,7 +33,7 @@ export default function Navbar() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ background: 'darker(1)' }}
-                        className="bg-blue-700 px-4 py-2 cursor-pointer rounded-[7px] font-mono text-gray-200 "
+                        className="bg-black px-4 py-2 cursor-pointer rounded-[7px] font-mono text-gray-200 "
                     >
                         Open app
                     </motion.button>

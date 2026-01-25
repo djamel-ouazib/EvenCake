@@ -24,7 +24,7 @@ export default function Home() {
                             <motion.button
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ background: 'darker(1)' }}
-                                className="bg-blue-700 px-18 py-3 cursor-pointer rounded-[7px] font-medium text-gray-200 "
+                                className="bg-black px-18 py-3 cursor-pointer rounded-[7px] font-medium text-gray-200 "
                             >
                                 Get Started
                             </motion.button>
