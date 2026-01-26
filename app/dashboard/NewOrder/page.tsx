@@ -1,3 +1,4 @@
+import { addCustomer } from '@/app/lib/actions'
 import Input from '@/app/ui/dashboard/Input'
 
 export default function NewOrder() {
@@ -9,7 +10,7 @@ export default function NewOrder() {
             <p className="text-center">
                 take few minute to add a new order for your customrs
             </p>
-            <form action="" method="post">
+            <form action={addCustomer}>
                 <div className="p-6  rounded-xl max-w-3xl m-auto  ">
                     {/* first name & last name */}
                     <div className="flex gap-3 mb-3">
@@ -103,7 +104,7 @@ export default function NewOrder() {
                                 id="EventDate"
                                 placeHolder=""
                                 type="date"
-                                name="evntDate"
+                                name="eventDate"
                             />
                         </div>
                         <div className="flex-1">
@@ -150,7 +151,7 @@ export default function NewOrder() {
                                 id="numberOfServing"
                                 placeHolder="0"
                                 type="number"
-                                name="numberOfServing"
+                                name="numberOfServings"
                             />
                         </div>
                         <div className="flex-1">
