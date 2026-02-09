@@ -1,4 +1,5 @@
 'use client'
+
 import Table from '@/app/ui/dashboard/table'
 import { motion } from 'motion/react'
 export default function customers() {
