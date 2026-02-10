@@ -2,7 +2,7 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
 import { FaCalendar } from 'react-icons/fa'
-import { FaRegClock } from 'react-icons/fa'
+
 type Props = {
     status: string
     color: string

@@ -1,4 +1,3 @@
-import { FaBars } from 'react-icons/fa'
 import NavLinks from './nav-links'
 import { useEffect } from 'react'
 import { PanelLeft } from 'lucide-react'
@@ -28,7 +27,9 @@ export default function Sidenav({ show, setShow }: Props) {
                 {show && (
                     <div className="flex gap-2 items-center flex-3 hover:bg-zinc-100 cursor-pointer py-1 px-3 rounded-[7px]">
                         <span className="w-5 h-[20px] rounded-[20px] bg-green-300"></span>
-                        <p className="text-zinc-600 font-bold">djamel ouazib</p>
+                        <p className="text-zinc-600 text-sm font-bold">
+                            djamel ouazib
+                        </p>
                     </div>
                 )}
                 <PanelLeft

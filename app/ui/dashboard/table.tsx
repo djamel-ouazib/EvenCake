@@ -18,7 +18,7 @@ export default function Table() {
 
         fetchCustomers()
     }, [])
-    console.log('customers: ', customers)
+
     console
     return (
         <div>
