@@ -1,11 +1,9 @@
 import { prisma } from '@/app/lib/prisma/prisma'
 
 export async function GET() {
-    const customers = await prisma.customer.findMany({
-        orderBy: { id: 'asc' },
-    })
+    const totalCustomers = await prisma.customer.count()
 
-    return new Response(JSON.stringify(customers), {
+    return new Response(JSON.stringify(totalCustomers), {
         headers: { 'Content-Type': 'application/json' },
     })
 }

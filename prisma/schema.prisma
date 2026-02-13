@@ -23,14 +23,7 @@ model Customer {
   totalPrice          Float?
   depositPaid         Float?
   createdAt           DateTime    @default(now())
-  status              OrderStatus @default(PENDING)
+  status              String   @default("PENDING")
 }
 
-enum OrderStatus {
-  PENDING
-  CONFIRMED
-  IN_PROGRESS
-  READY
-  DELIVERED
-  CANCELLED
-}
+

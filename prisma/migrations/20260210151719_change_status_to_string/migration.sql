@@ -15,6 +15,7 @@ CREATE TABLE "Customer" (
     "totalPrice" DOUBLE PRECISION,
     "depositPaid" DOUBLE PRECISION,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "status" TEXT NOT NULL DEFAULT 'PENDING',
 
     CONSTRAINT "Customer_pkey" PRIMARY KEY ("id")
 );

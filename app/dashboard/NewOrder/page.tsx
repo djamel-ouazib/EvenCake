@@ -223,7 +223,7 @@ export default function NewOrder() {
                         {' '}
                         <button
                             type="submit"
-                            className="bg-black w-full cursor-pointer text-white py-3 px-1 rounded-[7px]"
+                            className="bg-[#DA3036] w-full cursor-pointer text-white py-3 px-1 rounded-[7px]"
                         >
                             Add
                         </button>

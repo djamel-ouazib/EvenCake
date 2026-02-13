@@ -39,6 +39,7 @@ export async function addCustomer(formData: FormData) {
     })
 
     if (!validatedFields.success) {
+        console.log(validatedFields.error.flatten().fieldErrors)
         redirect('/dashboard')
     }
 
@@ -61,6 +62,23 @@ export async function addCustomer(formData: FormData) {
             depositPaid: Number(data.depositPaid),
         },
     })
+    revalidatePath('/dashboard/customers')
+    redirect('/dashboard/customers')
+}
+
+export async function UpdateStatus(id: number, status: string) {
+    try {
+        await prisma.customer.update({
+            where: {
+                id,
+            },
+            data: {
+                status: status,
+            },
+        })
+    } catch (error) {
+        console.error(error)
+    }
     revalidatePath('/dashboard/customers')
     redirect('/dashboard/customers')
 }
